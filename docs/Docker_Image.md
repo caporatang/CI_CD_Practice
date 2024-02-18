@@ -80,8 +80,16 @@ Docker Image에 대한 이해
 > Pull 받은 이미지는 결국 file로 생성된다. : /image/overlay2 (storageDriver) 경로에    
 > /distribution/diffid-by-digest/sha256/ : digest 값으로 구분된다.
 
- # 정리
+# 정리
 - 이미지는 불변 즉, Read only 형태로 만들어지고
 - docker run 명령어로 컨테이너를 생성하면 [Container layer]가 read write로 추가된다.  
 
-> ![layer 구조 확인](../docs/img/docker_image/docker_layer.png)
+> ![최종 구조](../docs/img/docker_image/docker_imgae_layer.png)
+> 1. layer 1, 2, 3 은 debian linux
+> 2. debian linux에 apache가 추가되서 새로운 layer
+> 3. debian linux에 apache가 추가되서 새로운 layer 여기에 web source가 추가되서 새로운 layer가 또 추가된다.
+> 4. docker run을 통해서 실행하면 image에 대한 스냅샷이 컨테이너에 저장된다.
+> 5. 컨테이너 시작이 되면 READ / WRITE 가 가능한 컨테이너가 생성된다   
+> -> ReadOnly layer(이미지 영역)가 따로 있고, READ WRITE Layer(컨테이너 영역)가 따로 생성된다.  
+> -> 컨테이너에서는 따로 READ/WRITE가 가능하기 때문에 commit 명령어를 컨테이너 영역에서 사용하게 되면 변경된 부분을 포함해서 신규 이미지가 생성된다.
+> 6. 이미지는 여러개의 layer로 되어있고 하나의 파일 시슽메으로 사용하게 해주는 기능을 UFS(union filesystem) 이라고 한다.
