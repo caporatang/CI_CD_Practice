@@ -35,7 +35,8 @@
 - hub.docker.com에 본인 계정의 Repositories에 생성한 이미지를 업로드하기 위해서는 본인계정을 이미지명 앞에 붙여야 docker push 수행 시 계정으로 찾아가 저장된다.
 > ![docker_push](../docs/img/docker_registry/docker_push.png)
 > ![docker_push_result](../docs/img/docker_registry/docker_push_result.png)
-> **private repository는 계정당 하나만 생성할 수 있다**
-> 
+> **private repository는 계정당 하나만 생성할 수 있다**  
+
+
 
  
