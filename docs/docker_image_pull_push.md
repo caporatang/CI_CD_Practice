@@ -37,6 +37,39 @@
 > ![docker_push_result](../docs/img/docker_registry/docker_push_result.png)
 > **private repository는 계정당 하나만 생성할 수 있다**  
 
+## 올렸던 이미지를 다른 서버에서 Pull 받고 실행해서 정상 실행 되는지 확인하기
+- hostos2 번으로 접속해서 Pull 땡기고 확인해보자^^!  
+> ![docker_pull](../docs/img/docker_registry/docker_pull/docker_pull.png)
+> ![pull_run](../docs/img/docker_registry/docker_pull/pull_run.png)
+> ![curl](../docs/img/docker_registry/docker_pull/curl.png)
 
-
+##### 이미지를 공유하는 방법은 
+1. registry에 push 하여 공유한다.
+2. 이미지를 생성하는 Dockerfile과 소스를 Github에 올려서 공유한다.
+3. 이미지를 docker save를 통해 파일로 백업해서 전달 후 docker load를 통해 공유한다.
  
+
+### 파일로 공유하는 방법
+- docker save 명령을 통해 Layer로 구성된 이미지를 *.tar 파일로 묶어 파일로 저장한다. (여러 계층으로 되어 있기 때문에)
+- 해당 파일을 전달 받은 컴퓨터에서 docker load를 통해 이미지로 등록한다.
+
+### docker image 삭제 
+- docker image save를 통해 이미지를 백업하거나 주기적으로 업무에 사용하는 이미지와 사용하지 않는 이미지를 구분해서 관리, 불필요한 이미지는 삭제
+> docker image rm [option] {이미지명[:태그] | 이미지ID}  
+> docker rmi [option] {이미지명[:태그] | 이미지ID}
+> 
+> 이미지 전체 삭제
+> docker rmi $(docker images -q)
+>
+> 특정 이미지명이 포함된 것만 삭제
+> docker rmi $(docker images | grep debian)
+> 
+> 반대로 특정 이미지명이 포함된 것만 제외하고 모두 삭제. 
+> docker rmi $(docker images | grep -v centos)
+
+### example) alias를 등록해서 상태가 exited인 container 모두 삭제하기
+- alias cexrm='docker rm $(docker ps --filter 'status=exited' -a -q)'  
+> ![alias_registry](../docs/img/docker_registry/alias_registry.png)
+> ![use_alias](../docs/img/docker_registry/use_alias.png)
+> ### 더 간편하게 쓰려면 .bashrc # for example 영역에 붙여넣고 사용하면 편리하다.
+> ![alias_bashrc](../docs/img/docker_registry/alias_bashrc.png)
