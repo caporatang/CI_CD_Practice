@@ -11,7 +11,7 @@
 > -p : docker registry는 기본적으로 5000 포트를 EXPOSE 하고있다. 그래서 PORT를 5000번으로 열어주는것이다.  
 > > docker proxy를 사용해서 외부에서 컨테이너 내부 5000번 포트로 전달한다.
 
-> ![docker_registry_curl](../docs/img/docker_registry/private_registry/registry_curl.png)
+> ![docker_registry_curl](../docs/img/docker_registry/private_registry/registry_curl.png)  
 > 5000 포트로 요청을 보낸다 -> /v2/_catalog 는 registry의 기본 주소값이다. 통신이 잘 된다.~
 >
 
