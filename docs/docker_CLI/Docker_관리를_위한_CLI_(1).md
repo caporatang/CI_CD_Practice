@@ -70,7 +70,7 @@
 --name=cadvisor \
 --privileged \
 --device=/dev/kmsg \
-gcr.io/cadvisor/cadvisor:latest
+gcr.io/cadvisor/cadvisor:latest  
 > ![cadvisor_1](../docker_CLI/img/cadvisor_1.png)  
 > ![cadvisor_1](../docker_CLI/img/cadvisor_2.png)
 
