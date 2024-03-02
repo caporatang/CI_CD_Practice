@@ -46,8 +46,8 @@ Docker Image에 대한 이해
 > docker image inspect --format="{{.ContainerConfig.ExposedPorts}}" httpd:2.4
 > 
 > 두가지 정보를 확인하고 싶으면 원하는 정보 두가지를 넣는다.   
-> docker image inspect --format="{{.RepoTags}} {{.Os}}" httpd:2.4 
-> ![inspect 구조 확인](../docs/img/docker_image/inspect_total.png) 
+> docker image inspect --format="{{.RepoTags}} {{.Os}}" httpd:2.4   
+> ![inspect 구조 확인](../docs/img/docker_image/inspect_total.png)   
 > ![inspect 구조 확인](../docs/img/docker_image/inspect_Os.png)
 
   
