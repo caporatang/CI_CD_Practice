@@ -37,19 +37,19 @@
 - IP/item 컨테이너 2대
 - IP/basket 컨테이너 2대  
 <br>
-- conf 파일 수정
-![basket_item](../docker_network/img/basket_item.png)
-> item으로 들어오면 web1_backend로 , basket으로 들어오면 web2_backend로 할당
-> 주소 없이 그냥 들어오면 기존 roundrobin 방식으로 처리.
+- conf 파일 수정  
+![basket_item](../docker_network/img/basket_item.png)  
+> item으로 들어오면 web1_backend로 , basket으로 들어오면 web2_backend로 할당  
+> 주소 없이 그냥 들어오면 기존 roundrobin 방식으로 처리.  
 <br>
-- item, basket 각각의 컨테이너 생성 및 실행
-![item_container](../docker_network/img/item_container.png)    
-![basket_container](../docker_network/img/basket_container.png)    
+- item, basket 각각의 컨테이너 생성 및 실행  
+![item_container](../docker_network/img/item_container.png)  
+![basket_container](../docker_network/img/basket_container.png)  
 <br>
-- item , basket으로 요청했을 때 트래픽 분산이 잘 되는지 확인해보자.
-![localhost_basket](../docker_network/img/localhost_basket.png)  
+- item , basket으로 요청했을 때 트래픽 분산이 잘 되는지 확인해보자.  
+![localhost_basket](../docker_network/img/localhost_basket.png)    
 ![localhost_item](../docker_network/img/localhost_item.png)  
-> - item은 1, 2 번 컨테이너에 요청이 잘 들어가고, basket은 3,4 번 컨테이너에 요청이 잘 들어가는것을 확인할수있다. 
+> - item은 1, 2 번 컨테이너에 요청이 잘 들어가고, basket은 3,4 번 컨테이너에 요청이 잘 들어가는것을 확인할수있다.   
 
 
 
