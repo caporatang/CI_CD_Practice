@@ -45,18 +45,18 @@
 - prometheus를 Grafana를 연동해서 시각화가 가능하다. 원하는 패턴으로 구성이 가능함.
 
 ### 간단하게 prometheus grafana 연동 
-- **따로 공부 필요..어렵다**
+- **따로 공부 필요..어렵다**  
 ![prometheus_xml](../docker_management_resource_monitoring/img/prometheus_xml.png)  
-> prometheus 는 9090 포트로, node-exporter 9100 포트로, cadvisor는 사용하던 포트 그대로, grafana는 3000번 포트로 실행
-> cadvisor에서 발생되는 정보를, prometheus가 수집하고, 수집된 데이터를 grafana가 시각화하게끔 연동.
+> prometheus 는 9090 포트로, node-exporter 9100 포트로, cadvisor는 사용하던 포트 그대로, grafana는 3000번 포트로 실행  
+> cadvisor에서 발생되는 정보를, prometheus가 수집하고, 수집된 데이터를 grafana가 시각화하게끔 연동.  
+  
+![Grafana_prometheus](../docker_management_resource_monitoring/img/Grafana_prometheus.png)    
+> - 연동은 해서 접속까진 했는데, 시각화하고 하는건 나중에 따로 해보자..~  
 
-![Grafana_prometheus](../docker_management_resource_monitoring/img/Grafana_prometheus.png)  
-> - 연동은 해서 접속까진 했는데, 시각화하고 하는건 나중에 따로 해보자..~
-
-## 컨테이너 리소스 측정 도구, htop
-- 자원 소비 측정을 위한 htop 도구를 설치한다.
+## 컨테이너 리소스 측정 도구, htop  
+- 자원 소비 측정을 위한 htop 도구를 설치한다.  
 - htop은 각 코어수를 확인해서 각 프로세스 정보를 좀 더 자세히 보여주는 실시간 모니터링 도구이다.
-> ![run_htop](../docker_management_resource_monitoring/img/run_htop.png)
+> ![run_htop](../docker_management_resource_monitoring/img/run_htop.png)  
 > 1. F1 Help  : 단축키 기능 확인
 > 2. F2 Setup : htop 설정메뉴
 > 3. F3 Search: 프로세스 검색
