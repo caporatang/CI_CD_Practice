@@ -18,7 +18,7 @@
 > - 즉, CPU 사용률이 많지 않으면 아무것도 없는 상태에서는 time scheduling은 동일하게 적용된다.
 
 - --cpu에 코어수만 지정해서 CPU가 100% 할당하는 모습을 확인해보자
-![비율지정_X](../docker_management_resource_monitoring/img/비율지정_X.png)  
+![비율지정_X](../docker_management_resource_monitoring/img/비율지정_X.png)    
 
 
 - stress 명령어를 통해 1024, 512 시간 가중치를 확인해보자
