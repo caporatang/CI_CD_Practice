@@ -19,15 +19,15 @@
 > - 이는 전체 600m에서 -m 값을 뺀 나머지만큼 swap이 사용된다는 의미.
 
 ### memory hard limit, --memory(-m)
-- 컨테이너 물리적 메모리 크기를 제한
-![nginx_hard_limit](../docker_management_resource_monitoring/img/nginx_hard_limit.png)  
-![cadvisor_hard_limit](../docker_management_resource_monitoring/img/cadvisor_hard_limit.png)  
+- 컨테이너 물리적 메모리 크기를 제한  
+![nginx_hard_limit](../docker_management_resource_monitoring/img/nginx_hard_limit.png)    
+![cadvisor_hard_limit](../docker_management_resource_monitoring/img/cadvisor_hard_limit.png)    
 
-- memory swap 설정
-![swap_memory_ubunt](../docker_management_resource_monitoring/img/swap_memory_ubunt.png)
+- memory swap 설정  
+![swap_memory_ubunt](../docker_management_resource_monitoring/img/swap_memory_ubunt.png)    
 > swap 메모리 설정시 주의점!!  
 > 첨부한 이미지 처럼 메모리를 200으로, swap 메모리를 300으로 잡은경우 사용 가능한 스왑 메모리는 100이다.  
 
-![swap_limit](../docker_management_resource_monitoring/img/swap_limit.png)  
+![swap_limit](../docker_management_resource_monitoring/img/swap_limit.png)    
 
 **CPU와 마찬가지로 docker update 를 사용하면 메모리도 수정할수있다.**  
