@@ -2,7 +2,7 @@
 - test 파일 생성 -> 이 파일들을 컨테이너 내부와 연결 하고 싶다.  
 ![bind_mount_file_생성](../docker_volume/img/bind_mount_file_생성.png)    
 - bind volume 생성
-> ![bind_mount_경로_설정](../docker_volume/img/bind_mount_경로_설정.png)  
+> ![bind_mount_경로](../docker_volume/img/bind_mount_경로.png)  
 > - 테스트 파일을 만든 경로 bind01,02를 컨테이너 내부에 있는 bind01,02로 연결하겠다.  
 > - 이렇게 경로를 설정하면 컨테이너 내부에 자동으로 생성된다.
 - ubuntu 컨테이너 내부에 자동 생성 확인 (sda 영역)  
