@@ -17,24 +17,24 @@
 > - volume 으로 잡았던 경로를 조회해보면 컨테이너가 지워져도 데이터는 유지된다.
 
 ### '암시적 docker volume', 볼륨 생성 없이 사용하는 방법
-- 컨테이너 실행할때 volume 이름을 지정하지 않고 실행한다.
-![unknown_volume](../docker_volume/img/unknown_volume.png)      
-![unknown_hash](../docker_volume/img/unknown_hash.png)       
+- 컨테이너 실행할때 volume 이름을 지정하지 않고 실행한다.  
+![unknown_volume](../docker_volume/img/unknown_volume.png)        
+![unknown_hash](../docker_volume/img/unknown_hash.png)         
 > - volume을 이름이나 경로 아무것도 지정하지 않으면 임의의 hash값이 이름으로 자동 설정된다.
 
 ## Data Container
 - 여러 컨테이너에 데이터를 공유하고자 하는 경우 '데이터 컨테이너' or '볼륨 컨테이너'를 만들고, "--volumes-from 공유 컨테이너명" 옵션을 사용하여 볼륨을 공유할 수 있다.
-> - 데이터 공유 컨테이너를 만들고 그 컨테이너에 있는 데이터를 나눠서 사용한다고 생각하면 된다.
+> - 데이터 공유 컨테이너를 만들고 그 컨테이너에 있는 데이터를 나눠서 사용한다고 생각하면 된다.  
 ![data_container](../docker_volume/img/data_container.png)         
 
-- 암시적 volume으로 share container 생성
-![share_container_create](../docker_volume/img/share_container_create.png)   
-- volumes from 을 사용해서 생성한 share-container 를 설정해주자
-![data-1_container](../docker_volume/img/data-1_container.png)      
-![share_container_df](../docker_volume/img/share_container_df.png)    
-- 컨테이너간의 볼륨 공유를 확인하기 위해 임의 파일을 하나 만들어보자 -> share_container에 생성되는것이다.
-![create_file](../docker_volume/img/create_file.png)      
-- 파일을 생성한 data-1 컨테이너를 삭제하고 2번 컨테이너를 share_container로 volume을 설정한 후에 생성한 파일을 확인해보자
+- 암시적 volume으로 share container 생성  
+![share_container_create](../docker_volume/img/share_container_create.png)     
+- volumes from 을 사용해서 생성한 share-container 를 설정해주자  
+![data-1_container](../docker_volume/img/data-1_container.png)        
+![share_container_df](../docker_volume/img/share_container_df.png)      
+- 컨테이너간의 볼륨 공유를 확인하기 위해 임의 파일을 하나 만들어보자 -> share_container에 생성되는것이다.  
+![create_file](../docker_volume/img/create_file.png)  
+- 파일을 생성한 data-1 컨테이너를 삭제하고 2번 컨테이너를 share_container로 volume을 설정한 후에 생성한 파일을 확인해보자  
 ![confirm_create_file](../docker_volume/img/confirm_create_file.png)  
 
 ### **share container는 bind mount로 경로를 직접적으로 설정해줘도 사용할 수 있다.**
