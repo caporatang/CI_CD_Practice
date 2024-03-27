@@ -21,7 +21,7 @@
 - 리눅스를 사용해야 한다면, 업무요건에 꼭 특정 OS를 사용해야 하는게 아니라면 base image를 alpine Linux로 변경하여 이미지 크기를 줄인다.  
 ![mywebserver-3](../docker_file/img/mywebserver-3.png)     
 - 최종적으로 용량을 비교해보면 alpine이 압도적으로 가벼운 이미지인것을 확인 가능    
-![myweb_최종비교](../docker_file/img/myweb_최종비교.png)      
+![myweb_최종비교](../docker_file/img/myweb_최종비교.png)        
 
 ### multi-stage build를 통한 이미지 경량화
 - multi-stage로 만들어진 dockerfile 과 multi-stage가 아닌 dockerfile의 용량을 비교해보자  
