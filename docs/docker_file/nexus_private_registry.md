@@ -45,7 +45,7 @@
 - 목록에서 docker_hosted 선택  
 ![docker_hosted](../docker_file/img/docker_hosted.png)    
 - 설정값  
-![docker_hosted_설정](../docker_file/img/docker_hosted_설정.png)       
+![docker_hosted_설정](../docker_file/img/docker_hosted_config.png)       
 > - 위에서 부터 
 > - 저장소 이름 설정
 > - 5000번 포트로 설정
