@@ -28,12 +28,12 @@
 
 ## swarm 전용 : visualizer
 - visualizer는 어디에 뭐가 현재 올라가 있다 를 편하게 알 수 있는 서비스다.
-- visualizer 만들기
+- visualizer 만들기  
 ![service_create_visualizer](../docker_swarm/img/service_create_visualizer.png)      
 > - 만들어진 service 확인하기  
 > ![check_visualizer](../docker_swarm/img/check_visualizer.png)    
 > - running 되고 있는 task(container)를 확인할 수 있음.  
-- visualizer 접속
+- visualizer 접속  
 ![visualizer](../docker_swarm/img/visualizer.png)    
 > - visualizer는 다른 기능은 없고, 그저 swarm으로 어떤 node가 있는지, 그리고 어떤 host인지, 어디에 어떤 컨테이너가 실행중인지만 볼수있다.  
 
