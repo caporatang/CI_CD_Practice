@@ -5,7 +5,7 @@
 - 3초마다 입력한 문구를 출력하는 간단한 service  
 ![stdout_3_second](../docker_swarm/img/stdout_3_second.png)  
 > - 요청을 던졌을 떄, API가 받아서 오케스트레이터에 의해서 전달이되고  디스패처 스케쥴러에 할당이되서 노드로 할당이 된다. 
-- 모니터링 도구에서 확인해보면 ?
+- 모니터링 도구에서 확인해보면 ?  
 ![visualizer_stdout](../docker_swarm/img/visualizer_stdout.png)    
 > - hostos3 영역에 생성됐다!
 
@@ -15,7 +15,7 @@
 > - Nginx 이미지를 이용해서 3개의 복제본이 있는 nginx(http) 서비스를 만든다. 세 가지 인스턴슨는 각각 swarm의 task가 된다.
 > - 인스턴스는 '작업' 을 뜻하고 task는 Nginx 이미지와 함께 Nginx 컨테이너를 보유하게 된다.
 > - 서비스라는 개념이 가장 큰 개념이다.
-- service 생성
+- service 생성  
 ![nginx_service_create](../docker_swarm/img/nginx_service_create.png)      
 > - 현재 클러스터의 매니저는 hostos1인데, 매니저에도 할당이 되어있다. -> 매니저 노드도 다른 노드와 동일하게 사용이 가능하다
 - IVPS 에 의해서 부하분산이 되는지 확인해보기    
@@ -84,7 +84,7 @@
 
 
 ## node의 유지보수
-- swarm node에 대한 정기 작업 등으로 인한 downtime이 필요한 경우, drain 수행
+- swarm node에 대한 정기 작업 등으로 인한 downtime이 필요한 경우, drain 수행  
 ![docker_node_help](../docker_swarm/img/docker_node_help.png)    
 > - drain 옵션은 특정 node에 배치되어 있던 서비스를 모두 소거하고, 다른 노드에 재배치 시켜주는 옵션이다.
 > - 한번 소거된 node가 다시 active 상태가 되더라도 기존 서비스들이 rebalance 되지 않는다. -> Global mode service 는 재배치된다
