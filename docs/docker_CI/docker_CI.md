@@ -45,6 +45,6 @@
 > > - 애플리케이션 테스트가 마무리 되면 docker image 운영 환경에 배포된다.
 
 ## Docker 환경에서의 CI? 
-- pull request or git push 로 코드가 입력되면 자동으로 docker build가 수행되고 성공, 실패를 나타내고 docker hub에 새로운 docker image가 build되어 저장되는 일련의 과정 이다
+- pull request or git push 로 코드가 입력되면 자동으로 docker build가 수행되고 성공, 실패를 나타내고 docker hub에 새로운 docker image가 build되어 저장되는 일련의 과정 이다  
 ![Ci_flow](../docker_CI/img/Ci_flow.png)      
 ![CI_Details](../docker_CI/img/CI_Details.png)      
