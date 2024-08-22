@@ -29,7 +29,7 @@
 > - New layer 생성 명령어 : FROM, RUN, COPY, ADD, ENV, LABEL
 > - 다른 명령어는 build 과정에서 임시 이미지를 생성하고 삭제된다.
 > > - Layer 수 최소화 예로, RUN 사용 시 가능하면 명령을 결합(그룹화)하여 사용한다.  
-> > ![layer_limit](../docker_file/img/layer_limit.png)
+> > ![layer_limit](img/layer_limit.png)
 5. One application One container
 - 하나의 컨테이너에 2개 이상의 애플리케이션을 설정하게 되면 애플리케이션의 결합성이 높고 확장성을 저해한다.
 - 하나의 컨테이너에 하나의 애플리케이션 동작은 컨테이너 간의 독립성을 보장함과 동시에 애플리케이션 버전관리, 소스코드 모듈화 등에 장점을 제공한다.

@@ -1,0 +1,21 @@
+name: Basic Sample # 워크플로우를 식별할 수 있는 이름
+on: workflow_dispatch # 이벤트 트리거를 정의 (workflow_dispatch : 사용자가 수동으로 클릭)
+jobs: # 작업
+  build:
+    runs-on: ubuntu-latest # runner
+    steps: # step은 결국 어떤 내용을 실행할것인가에 대한 정의
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build project
+        run: |
+          echo "Build Project"
+      - name: Run tests
+        run: |
+          echo "Run Test"
+  deploy: # runner
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to production
+        run: |
+          echo "Deploying to production server"

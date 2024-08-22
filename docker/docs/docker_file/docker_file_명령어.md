@@ -21,7 +21,7 @@
 - docker build : Dockerfile을 사용하여 docker image 생성 과정을 트리거 하는 Docker CLI. -> Artifact를 만드는것!  
 - Image registry : 생성된 이미지를 public or private하게 저장할 수 있는 영역
 - Docker image에 포함된 애플리케이션 인프라에 프로세스를 붙여 서비스로 배포되는 것을 컨테이너라고 함.    
-> ![docker_file?](../docker_file/img/docker_file_build.png)  
+> ![docker_file?](img/docker_file_build.png)  
 
 ## 명령어
 - 대문자로 사용하는것이 권장사항임

@@ -22,7 +22,7 @@
 ### 지속적 제공(CD) 
 - CD(지속적 제공)는 유효한 개발 코드를 repository에 자동 Release 하여 운영 환경으로 배포할 준비가 되어 있는 안정적 배포 준비 단계.
 - CD는 CI단계를 거쳐 검증이 완료된 개발 코드를 저장소로 가져와서 수동 또는 자동으로 지속적 배포 단계로 넘겨 운영 환경으로 배포되게 된다.  
-![CI/CD](../docker_CI/img/CI_CD.png)      
+![CI/CD](img/CI_CD.png)      
 
 ### CI/CD 자동화 배포 이후 
 - 구성된 workflow에 맞춰 형상 관리 도구에 개발 코드를 통합한다.
@@ -46,5 +46,5 @@
 
 ## Docker 환경에서의 CI? 
 - pull request or git push 로 코드가 입력되면 자동으로 docker build가 수행되고 성공, 실패를 나타내고 docker hub에 새로운 docker image가 build되어 저장되는 일련의 과정 이다
-![Ci_flow](../docker_CI/img/Ci_flow.png)      
-![CI_Details](../docker_CI/img/CI_Details.png)      
+![Ci_flow](img/Ci_flow.png)      
+![CI_Details](img/CI_Details.png)      

@@ -21,18 +21,18 @@
 #### docker attach | exec
 - attach 와 exec의 차이는?
 > attach같은 경우 내부에 돌아가는 실제 돌아가는 작업에 대한 로그를 출력하는것.  
-> ![attach](../docker_CLI/img/attach.png)  
+> ![attach](img/attach.png)  
 > exec는 내부에 들어가서 뭔가 작업을 해야하는 경우..  
-> ![exec](../docker_CLI/img/docker_exec.png)    
-> ![exec](../docker_CLI/img/docker_exec2.png)  
+> ![exec](img/docker_exec.png)    
+> ![exec](img/docker_exec2.png)  
 
 #### docker idff 
 - 실행 중인 컨테이너에 변경사항을 출력한다.
-> ![diff](../docker_CLI/img/docker diff.png)
+> ![diff](img/docker%20diff.png)
 
 #### docker commit 
 - 실행 중인 컨테이너의 변경사항을 포함한 새로운 이미지 생성
-> ![commit](../docker_CLI/img/docker_commit.png)
+> ![commit](img/docker_commit.png)
 
 #### docker export | import
 - docker export, 실행 중인 컨테이너의 파일 시스템을 tar archive로 내보내기(backup, migration)

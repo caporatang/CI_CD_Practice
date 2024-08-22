@@ -1,5 +1,5 @@
 ## Docker 컨테이너 관리를 위한 CLI  
-![필요한_명령어](../docker_CLI/img/관리를_위해_필요한_명령어.png)  
+![필요한_명령어](img/관리를_위해_필요한_명령어.png)  
 - https://docs.docker.com/engine/reference/commandline/container
 
 ### option
@@ -34,9 +34,9 @@
 
 > docker log는 어디위치에 쌓이게 될까?  
 > sudo ls -l /var/lib/docker/containers  
-> ![log 위치](../docker_CLI/img/로그 위치.png)    
+> ![log 위치](img/로그%20위치.png)    
 > 이 목록에서 컨테이너 이름과 가장 앞글자쪽이 일치되는 항목을 찾고 다시 조회 해보면  
-> ![log 위치](../docker_CLI/img/Json 파일.png)  
+> ![log 위치](img/Json%20파일.png)  
 > json 파일에 로그가 쌓이게 된다 -> 주기적으로 관리해주자..~
 > - 관리는 어떻게 해줄까
 > - truncate 나 크론탭 이런걸로 날려도 좋고,
@@ -71,6 +71,6 @@
 --privileged \
 --device=/dev/kmsg \
 gcr.io/cadvisor/cadvisor:latest  
-> ![cadvisor_1](../docker_CLI/img/cadvisor_1.png)  
-> ![cadvisor_1](../docker_CLI/img/cadvisor_2.png)
+> ![cadvisor_1](img/cadvisor_1.png)  
+> ![cadvisor_1](img/cadvisor_2.png)
 
