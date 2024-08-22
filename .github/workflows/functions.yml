@@ -1,0 +1,18 @@
+  name: Function 1
+  on:
+    issues:
+      # issue 가 생성되거나 수정 되었을 때
+      types: [opened, edited, labeled, unlabeled]
+  jobs:
+    auto-assignee:
+      runs-on: ubuntu-latest
+      permissions:
+        issues: write
+      # Labels에 bug 라는 문자열이 있는 경우, 
+      # 환경변수에 설정된 BUG_HUNTERS로 issue 담당자를 자동 지정
+      if: ${{ contains(github.event.issue.labels.*.name, 'bug') }}
+      steps:
+        - name: Auto assign issue
+          uses: pozil/auto-assign-issue@v1
+          with:
+            assignees: ${{ vars.BUG_HUNTERS }}
