@@ -1,0 +1,16 @@
+  name: Condition 1
+  on: workflow_dispatch
+  jobs:
+    build:
+      # 레포지토리가 CI_CD_Practice 라면 run
+      if: github.repository == 'caporatang/CI_CD_Practice'
+      runs-on: ubuntu-latest
+      steps:
+        - name: Step 1
+          run: |
+            echo "Run Step 1, Say Hello"
+        - name: Step 2
+          # 이벤트가 해당 이벤트라면 run
+          if: github.event_name == 'xxxxxxx'
+          run: |
+            echo "Run Step 2, Say Hello"
