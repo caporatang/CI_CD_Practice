@@ -86,8 +86,9 @@ jobs:
 
 2. Default Variables
 GitHub에서 내부적으로 관리 중인 기본 환경 변수, prefix로 GITHUB_* 또는 RUNNER_* 설정된 네이밍을 사용한다.
+  
+
 ````yaml
----
 name: Variables_2
 on: workflow_dispatch
 env:
