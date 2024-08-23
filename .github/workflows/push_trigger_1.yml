@@ -3,7 +3,7 @@ on:
   push:
     branches:
     # 특정 브랜치에 push가 발생하면 실행
-      - 'test-**'
+      - 'test-*'
 jobs:
   build:
     runs-on: ubuntu-latest
