@@ -268,7 +268,7 @@ Job은 실행될 때 실행기(Runner)에 각각 할당되어 실행되기 때�
         # doSomething
         - name: Job is succeeded
           if: ${{suceess()}}
-
+    
   jobs:
     build:
       runs-on: ubuntu-lastest
@@ -276,7 +276,7 @@ Job은 실행될 때 실행기(Runner)에 각각 할당되어 실행되기 때�
         # doSomething
         - name: Job is failed
           if: ${{failure()}}
-     
+
   jobs:
     build:
       runs-on: ubuntu-lastest
