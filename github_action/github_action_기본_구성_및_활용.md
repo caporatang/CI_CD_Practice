@@ -53,7 +53,7 @@ Job(작업) 또는 워크플로우 단계에서 실행되는 명령은 변수를
 ### 변수 설정 방법
 1. 워크플로우 파일에 env 키로 정의하여, 단일 워크플로우에서 정의하는 방식
 ````yaml
----
+--- 
 name: Variables 1
 on: workflow_dispatch
 env:
