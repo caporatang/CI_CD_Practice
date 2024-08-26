@@ -1,0 +1,19 @@
+name: Multi Runner
+on: workflow_dispatch
+jobs:
+  build:
+    name: Multi OS Build
+    # 3개의 키워드가 배열로 설정되었으니, 총 3번 각각의 os로 실행된다.
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - id: checkout
+      name: Checkout 
+      uses: actions/checkout@v2
+    - id: run
+      name: Run
+      run: |
+        echo "$RUNNER_OS"
+        echo "Hello World"
